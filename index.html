@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shubhu X Tejas 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffe6f2,#fbeaff,#fff0f5);
+overflow:hidden;
+}
+
+/* Floating hearts */
+.heart-float{
+position:fixed;
+top:-20px;
+font-size:20px;
+animation:fall linear infinite;
+opacity:0.8;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(360deg);
+opacity:0;
+}
+}
+
+.book-wrapper{ perspective:3000px; }
+
+.book{
+width:370px;
+height:640px;
+position:relative;
+transform-style:preserve-3d;
+}
+
+.page{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#ffffff;
+border-radius:30px;
+box-shadow: 0 30px 80px rgba(255,105,180,0.25), 0 0 15px rgba(255,182,193,0.4);
+padding:25px;
+backface-visibility:hidden;
+transform-origin:left;
+transition:transform 1s ease;
+overflow-y:auto;
+}
+
+.book .page:nth-of-type(1){ z-index: 20; }
+.book .page:nth-of-type(2){ z-index: 19; }
+.book .page:nth-of-type(3){ z-index: 18; }
+.book .page:nth-of-type(4){ z-index: 17; }
+.book .page:nth-of-type(5){ z-index: 16; }
+.book .page:nth-of-type(6){ z-index: 15; }
+.book .page:nth-of-type(7){ z-index: 14; }
+.book .page:nth-of-type(8){ z-index: 13; }
+.book .page:nth-of-type(9){ z-index: 12; }
+.book .page:nth-of-type(10){ z-index: 11; }
+.book .page:nth-of-type(11){ z-index: 10; }
+
+.page.cover{
+background:linear-gradient(to bottom,#ffd6ec,#ffeaf5);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+h1{
+font-family:'Pacifico',cursive;
+color:#e75480;
+margin-bottom:20px;
+font-size:26px;
+}
+
+.heart{
+position:relative;
+width:250px;
+height:230px;
+}
+
+.heart img{
+width:70px;
+height:70px;
+object-fit:cover;
+border-radius:16px;
+position:absolute;
+}
+
+.img1{top:0;left:90px;}
+.img2{top:30px;left:20px;}
+.img3{top:30px;left:160px;}
+.img4{top:90px;left:0;}
+.img5{top:90px;left:90px;}
+.img6{top:90px;left:180px;}
+.img7{top:150px;left:20px;}
+.img8{top:150px;left:160px;}
+.img9{top:190px;left:90px;}
+.img10{top:60px;left:90px;}
+
+.cover-title{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-family:'Pacifico';
+color:#e75480;
+font-size:22px;
+}
+
+button{
+position:absolute;
+bottom:25px;
+right:25px;
+padding:12px 20px;
+border:none;
+border-radius:30px;
+background:#ff6fa5;
+color:white;
+font-weight:600;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(255,105,180,0.3);
+}
+
+.prev-btn{ left:25px; right:auto; }
+
+.timeline p{ margin:10px 0; }
+
+/* Added fade-in animation for page content */
+.page-content {
+  animation: fadeInPage 0.8s ease forwards;
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heartbeat animation for proposal title */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.05); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.proposal-title {
+  animation: heartbeat 1.5s infinite;
+}
+
+/* Confetti styles */
+.confetti {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #ff6fa5;
+  top: 0;
+  animation: confettiFall 3s linear forwards;
+}
+
+@keyframes confettiFall {
+  to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+</style>
+</head>
+<body>
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="song.mp3" type="audio/mp3">
+</audio>
+
+<!-- Floating hearts script -->
+<script>
+setInterval(()=>{
+let heart=document.createElement('div');
+heart.classList.add('heart-float');
+heart.innerHTML='💖';
+heart.style.left=Math.random()*100+'vw';
+heart.style.animationDuration=(4+Math.random()*4)+'s';
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),8000);
+},500);
+</script>
+
+<div class="book-wrapper">
+<div class="book">
+
+<!-- PAGE 1 COVER -->
+<div class="page cover">
+<div class="page-content">
+<h1>Valentine’s Special 💖</h1>
+
+<div class="heart">
+<img src="img1.jpeg" class="img1">
+<img src="img2.jpeg" class="img2">
+<img src="img3.jpeg" class="img3">
+<img src="img4.jpeg" class="img4">
+<img src="img5.jpeg" class="img5">
+<img src="img6.jpeg" class="img6">
+<img src="img7.jpeg" class="img7">
+<img src="img8.jpeg" class="img8">
+<img src="img9.jpeg" class="img9">
+<img src="img10.jpeg" class="img10">
+
+<div class="cover-title">Shubhu X Tejas 💕</div>
+</div>
+</div>
+<button onclick="nextPage()">Open Our Story 💌</button>
+</div>
+
+<!-- PAGE 2 TIMELINE -->
+<div class="page">
+<div class="page-content">
+<h1>Our Timeline 💖</h1>
+<div class="timeline">
+<h3>11th August 2025</h3>
+<p>Our reunion after 2 years ✨</p>
+<video src="img11.mp4" controls style="width:100%;border-radius:15px;margin:10px 0;"></video>
+
+<p><strong>Phase 2:</strong></p>
+<p>No messages till November…</p>
+<p>Then we started talking again in November 💕</p>
+<p>We had a beautiful situationship for 2 months.</p>
+
+<p><strong>Phase 3:</strong></p>
+<p>24th December 2025 – We met again 🎄</p>
+<img src="img5.jpeg" style="width:100%;border-radius:15px;margin:10px 0;">
+
+<p>18th January – We proposed each other 💍</p>
+<p>And our story continues till infinity ♾️</p>
+</div>
+</div>
+    <button class="prev-btn" onclick="prevPage()">Back</button>
+    <button onclick="nextPage()">Next 💌</button>
+</div>
+
+<!-- PAGE 3 HIDDEN -->
+<div class="page">
+<div class="page-content">
+<h1>Just For You 💌</h1>
+<p style="line-height:1.7;">
+I don’t always say this properly, but I really feel lucky to have you. You make my normal days feel better without even trying.
+<br><br>
+Sometimes I just sit and think about how comfortable I feel with you… and that’s rare.
+<br><br>
+I don’t need anything big — just you being there is enough.
+<br><br>
+I might not say it loudly every day, but what I feel for you is real and constant.
+<br><br>
+<strong>Love you till infinity and beyond ♾️💖</strong>
+</p>
+</div>
+<button class="prev-btn" onclick="prevPage()">Back</button>
+<button onclick="nextPage()">Next ✨</button>
+</div>
+
+<!-- PAGE 4 FUTURE -->
+<div class="page">
+<div class="page-content">
+<h1>Our Future Dreams ✨</h1>
+<p>1) Be together forever ♾️</p>
+<p>2) See you successful 🌟</p>
+<p>3) Be cat parents 🐾</p>
+<p>4) Watch movies & series together 🎬</p>
+<p>5) Celebrate festivals together 🎉</p>
+<p>6) Complete each other's fantasies 💭</p>
+<p>7) Explore the world with you 🌍</p>
+</div>
+<button class="prev-btn" onclick="prevPage()">Back</button>
+<button onclick="nextPage()">Next 💖</button>
+</div>
+
+<!-- PAGE 5 WHY I LOVE YOU -->
+<div class="page">
+<div class="page-content">
+<h1>Why I Love You 💕</h1>
+
+<p>• Your pure heart 💖</p>
+<p>• Your cute smile 😊</p>
+<p>• Those dimples that kill me 🥰</p>
+<p>• Your cute little raag 😌</p>
+<p>• The way you care deeply 🤍</p>
+<p>• How you remember small things I forget ✨</p>
+<p>• Strong yet soft 🌸</p>
+<p>• Independent but still choosing me 💫</p>
+<p>• Perfect… yet choosing this imperfect me ❤️</p>
+<p>• That Puneri jhatka 😏</p>
+<p>• And how you make my heart beat faster every single day 💓</p>
+</div>
+<button class="prev-btn" onclick="prevPage()">Back</button>
+<button onclick="nextPage()">Next 😏</button>
+</div>
+
+<!-- PAGE 6 QUIZ -->
+<div class="page">
+<div class="page-content">
+<h1>How Well Do You Know Me? 😏</h1>
+
+<div style="margin-top:20px; line-height:1.8; font-size:18px;">
+<p><strong>Q1:</strong> When did we meet in August and December?</p>
+<p><strong>Q2:</strong> What are my darkest fantasies?</p>
+<p><strong>Q3:</strong> What is my position in football?</p>
+<p><strong>Q4:</strong> In which standard were you my crush?</p>
+<p><strong>Q5:</strong> Where do I have a til?</p>
+
+<p style="margin-top:20px; font-style:italic;">Tell me your answers personally 😉💕</p>
+</div>
+</div>
+<button class="prev-btn" onclick="prevPage()">Back</button>
+<button onclick="nextPage()">Next 💞</button>
+</div>
+
+<!-- PAGE 7 PROMISES -->
+<div class="page">
+<div class="page-content">
+<h1>My Promises To You 💞</h1>
+<p>I promise to choose you — not just when it’s easy, but especially when it’s hard.</p>
+<p>I promise to listen to you even when I don’t fully understand, and to try until I do.</p>
+<p>I promise to respect your dreams, your space, and your growth.</p>
+<p>I promise to never make you feel alone in this relationship.</p>
+<p>I promise to celebrate your wins like they’re mine.</p>
+<p>I promise to protect your peace.</p>
+<p>I promise to remind you how loved you are — even on days when you forget.</p>
+<p><strong>And most importantly,</strong></p>
+<p><strong>I promise to stay.</strong></p>
+<p>Through moods. Through distance. Through life.</p>
+</div>
+<button class="prev-btn" onclick="prevPage()">Back</button>
+<button onclick="nextPage()">Next 💌</button>
+</div>
+
+
+<!-- PAGE 8 LETTER -->
+<div class="page">
+<div class="page-content">
+<h1>A Letter For You 💌</h1>
+<p><strong>Shubhu,</strong></p>
+<p>If I’m being honest, you became important to me without me even realizing when it happened.</p>
+<p>Somewhere between random conversations and quiet moments, you started feeling like home.</p>
+<p>You’re not just someone I talk to.</p>
+<p>You’re someone I feel safe with.</p>
+<p>I admire your strength, your softness, and the way you carry yourself.</p>
+<p>I don’t need grand gestures.</p>
+<p>Just your presence makes things better.</p>
+<p>Whatever life becomes, I’m grateful that it brought me to you.</p>
+<p><strong>Love,<br>Tejas 💕</strong></p>
+</div>
+<button class="prev-btn" onclick="prevPage()">Back</button>
+<button onclick="nextPage()">Next 🌧</button>
+</div>
+
+
+<!-- PAGE 9 WHEN TOUGH -->
+<div class="page">
+<div class="page-content">
+<h1>When Things Get Tough… 🌧</h1>
+<p>There will be days we misunderstand each other.</p>
+<p>Days we argue.</p>
+<p>Days we get silent.</p>
+<p>Days life feels heavy.</p>
+<p><strong>But I want you to know something —</strong></p>
+<p>I’m not walking away.</p>
+<p>Not over ego.</p>
+<p>Not over mood.</p>
+<p>Not over small fights.</p>
+<p>If something feels wrong, we fix it.</p>
+<p>If something hurts, we talk.</p>
+<p>If something breaks, we repair.</p>
+<p>Because what we have is worth choosing again and again.</p>
+<p>Even on bad days.</p>
+<p><strong>Especially on bad days.</strong></p>
+</div>
+<button class="prev-btn" onclick="prevPage()">Back</button>
+<button onclick="nextPage()">Next 💗</button>
+</div>
+
+
+<!-- PAGE 10 FAVORITES -->
+<div class="page">
+<div class="page-content">
+<h1>My Favorite Things About You 💗</h1>
+<p>Your smile — the one that makes me forget what I was saying.</p>
+<p>Your dimples — unfairly distracting.</p>
+<p>The cute little raag you show when you’re annoyed.</p>
+<p>The way you care quietly but deeply.</p>
+<p>How you remember small details that even I forget.</p>
+<p>Your strength — even when you think you’re weak.</p>
+<p>The comfort I feel around you.</p>
+<p>And the way you make ordinary days feel special.</p>
+</div>
+<button class="prev-btn" onclick="prevPage()">Back</button>
+<button onclick="nextPage()">Next 💍</button>
+</div>
+
+
+<!-- PAGE 11 FINAL PROPOSAL -->
+<div class="page">
+<div class="page-content">
+<h1 class="proposal-title">One Last Question… 💎</h1>
+<p>Out of all the chapters we’ve written…</p>
+<p>Out of all the moments that brought us here…</p>
+<p>If every lifetime exists somewhere in the universe…</p>
+<p>Will you choose me in every one of them?</p>
+<p>Will you stay?</p>
+<p>Will you be mine — not just today —</p>
+<p>but in all the tomorrows?</p>
+<h2 style="margin-top:20px; color:#e75480;">Forever With Me?</h2>
+</div>
+<button style="left:50%; transform:translateX(-50%); right:auto; bottom:40px;" onclick="celebrate()">Yes, Always ♾️💖</button>
+<button class="prev-btn" onclick="prevPage()">Back</button>
+</div>
+
+</div>
+</div>
+
+<script>
+let currentPage = 0;
+const pages = document.querySelectorAll(".page");
+
+function nextPage(){
+if(currentPage < pages.length-1){
+pages[currentPage].style.transform="rotateY(-180deg)";
+currentPage++;
+}
+}
+
+function prevPage(){
+if(currentPage > 0){
+currentPage--;
+pages[currentPage].style.transform="rotateY(0deg)";
+}
+}
+
+function celebrate(){
+  for(let i=0;i<80;i++){
+    let c=document.createElement("div");
+    c.classList.add("confetti");
+    c.style.left=Math.random()*100+"vw";
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),3000);
+  }
+  alert("Forever starts now ♾️💖");
+}
+
+// Play music with smooth fade-in
+let musicStarted = false;
+document.addEventListener("click", function(){
+  if(!musicStarted){
+    const music = document.getElementById("bgMusic");
+    music.volume = 0;
+    music.play();
+
+    let fadeInterval = setInterval(function(){
+      if(music.volume < 0.9){
+        music.volume += 0.05;
+      } else {
+        clearInterval(fadeInterval);
+      }
+    }, 200);
+
+    musicStarted = true;
+  }
+});
+</script>
+
+</body>
+</html>
